@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jianglu_01</title>
+    <style type="text/css">
+        body, html{
+            height: 100%;
+            width: 100%;
+            margin: 0; 
+            padding: 0;
+        }
+        .table-cell {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+        td {
+            padding: 5px 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form class="table-cell" action="" method="POST" name = "form" onsubmit="return makeCheck(this)">
+        <table border="1">
+            <tr>
+                <td>用户名</td>
+                <td><input type="text" name="username"></td>
+            </tr>
+            <tr>
+                <td>性别</td>
+                <td>
+                    <select name="性别">
+                        <option value="男">男</option>
+                        <option value="女">女</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>密码</td>
+                <td><input type="password" name="password"></td>
+            </tr>
+            <tr>
+                <td>确认密码</td>
+                <td><input type="password" name="password2"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="提交"></td>
+            </tr>
+        </table>
+    </form>
+    <script type="text/javascript">
+        function makeCheck(form) {
+            if(form.username.value==''){
+                alert('用户名不能为空！');
+                form.username.focus();
+                return false;
+            }
+            if(form.password.value==''){
+                alert('密码不能为空！');
+                form.password.focus();
+                return false;
+            }
+            if(form.password.value!=form.password2.value) {
+                alert('你两次输入的密码不一致，请重新输入！');
+                form.password2.focus();
+                return false;
+            }
+            return true;      
+        }
+    </script>
+</body>
+</html>

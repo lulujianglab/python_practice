@@ -1,0 +1,8 @@
+输入（进入目录）：cd /usr/local/bin
+
+输入：mongoexport -d jianglu -c jianglu --type=csv -f title,price,image -o jianglu.csv
+输出：
+2018-08-30T17:30:01.182+0800	connected to: localhost
+2018-08-30T17:30:01.183+0800	exported 24 records
+
+输入（将文件复制出来）：cp /usr/local/bin/jianglu.csv ~/PycharmProjects/weekend3_day4/
