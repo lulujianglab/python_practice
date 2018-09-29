@@ -1,3 +1,3 @@
-# python_practice
+# python_demo
 
-python集训
+python学习
